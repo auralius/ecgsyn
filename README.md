@@ -3,7 +3,7 @@
 This repository contains some attempts to reconstruct ECG signal generation algorithms that are based 
 on dynamical equations on an embedded system.
 
-Hardware: STM32U585 with 12-bit ADC and 12-bit True CAD
+Hardware: STM32U585 with 12-bit ADC and 12-bit True DAC.
 
 ```
 PA5 ──[1kΩ]──> A0
