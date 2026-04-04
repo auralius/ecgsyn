@@ -5,7 +5,7 @@ systems, targeting deployment on embedded platforms.
 
 Hardware:
 
-- MCU: STM32U585
+- MCU:  [WeActStudio STM32U585CI](https://github.com/WeActStudio/WeActStudio.STM32U585Cx_CoreBoard)
 - Peripherals: 12-bit ADC and 12-bit true DAC
 
 Signal loopback setup:
@@ -14,9 +14,9 @@ Signal loopback setup:
 PA5 ──[1kΩ]──> A0
 ```
 
----
+<img width="578" height="260" alt="system" src="https://github.com/user-attachments/assets/9b1cf345-e2cf-44f1-9c8a-e61b376b41ad" />
 
-![demo1](https://github.com/user-attachments/assets/409bd2aa-b182-416f-8240-856a8f459e76)
+---
 
 Current implementations:
 
@@ -32,4 +32,6 @@ To make the algorithm suitable for MCU deployment, the core routine has been ada
 These modifications were developed through an iterative process of analysis and refinement, with 
 assistance from ChatGPT for identifying structural issues in the original algorithm (particularly 
 memory scaling and RR expansion) and proposing MCU-safe adaptations.
+
+![demo](https://github.com/user-attachments/assets/75a439af-6e92-4347-a88d-b26342810378)
 
