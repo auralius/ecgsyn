@@ -22,7 +22,7 @@ Current implementations:
 
 - A Dynamical Model for Generating Synthetic Electrocardiogram Signals by McSharry et al. 
 
-The implementation was set to be as faithful as possible with the original paper. The original 
+The implementation is set to be as faithful as possible with the original paper. The original 
 reference implementation (`do_run(...)`) is designed for desktop environments and assumes abundant 
 memory.
 
