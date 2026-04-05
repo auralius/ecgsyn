@@ -35,3 +35,38 @@ memory scaling and RR expansion) and proposing MCU-safe adaptations.
 
 ![demo](https://github.com/user-attachments/assets/75a439af-6e92-4347-a88d-b26342810378)
 
+---
+
+- Generation of ECG signals from a reaction-diffusion model spatially discretized by Quiroz-Juárez et al.
+
+The paper does not provide accompanying software; however, the implementation is relatively straightforward. The nonlinear systems introduced—particularly in the quasiperiodic and chaotic regimes—are inherently sensitive to numerical methods. As a result, different solvers can produce noticeably different waveforms. In addition, the paper does not specify the value of `HRbpm` used in the simulations, which further contributes to variability in reproduction.
+
+```octave
+ % Define the dynamic system in (x1, x2, x3, x4)
+ % dx/dt as a column vector
+
+ % Factor Gamma_t
+ Gamma_t = 0.08804 * HR_bpm  - 0.06754;
+
+ ode_fun = @(t, x) Gamma_t .* [ ...
+     x(1) - x(2) - C*x(1)*x(2) - x(1)*x(2)^2; ...                                  % dx1/dt
+     H*x(1) - 3*x(2) + C*x(1)*x(2) + x(1)*x(2)^2 + beta*(x(4) - x(2)); ...         % dx2/dt
+     x(3) - x(4) - C*x(3)*x(4) - x(3)*x(4)^2; ...                                  % dx3/dt
+     H*x(3) - 3*x(4) + C*x(3)*x(4) + x(3)*x(4)^2 + 2*beta*(x(2) - x(4)) ...        % dx4/dt
+ ];
+
+ % Solve the ODE system
+ [t, x_out] = ode15s(ode_fun, tspan, x0, options);
+
+ % Apply Equation (4): Linear combination of the four states
+ ECG = alpha(1)*x_out(:,1) + alpha(2)*x_out(:,2) + alpha(3)*x_out(:,3) + alpha(4)*x_out(:,4);
+```
+
+__Continous System with `ode15s`__
+
+<img width="650" alt="image" src="https://github.com/user-attachments/assets/4ff2cd60-d0e0-4356-a5e2-f61690b9847b" />
+
+__Discrete System with implicit Tustin__
+
+<img width="650" alt="image" src="https://github.com/user-attachments/assets/dc011890-06a7-4f2d-9079-65848f88b782" />
+
