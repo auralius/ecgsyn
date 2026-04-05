@@ -70,3 +70,8 @@ __Discrete System with implicit Tustin__
 
 <img width="650" alt="image" src="https://github.com/user-attachments/assets/dc011890-06a7-4f2d-9079-65848f88b782" />
 
+__Implementation example in STM32U585CI__
+
+![nyutnyut-ezgif com-crop](https://github.com/user-attachments/assets/1fc92dd8-1633-4237-8016-77b70524828f)
+
+
