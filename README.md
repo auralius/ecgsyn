@@ -33,6 +33,8 @@ These modifications were developed through an iterative process of analysis and 
 assistance from ChatGPT for identifying structural issues in the original algorithm (particularly 
 memory scaling and RR expansion) and proposing MCU-safe adaptations.
 
+__Besides using the explicit Runge-Kutta solver as in the original paper, we also propose and implement an implicit bilinear (Tustin) solver.__
+
 ![demo](https://github.com/user-attachments/assets/75a439af-6e92-4347-a88d-b26342810378)
 
 ---
@@ -40,6 +42,9 @@ memory scaling and RR expansion) and proposing MCU-safe adaptations.
 - Generation of ECG signals from a reaction-diffusion model spatially discretized by Quiroz-Juárez et al.
 
 The paper does not provide accompanying software; however, the implementation is relatively straightforward. The nonlinear systems introduced—particularly in the quasiperiodic and chaotic regimes—are inherently sensitive to numerical methods. As a result, different solvers can produce noticeably different waveforms. In addition, the paper does not specify the value of `HRbpm` used in the simulations, which further contributes to variability in reproduction.
+
+__Similar to McSharry ECG model, this ECG model also uses explicit Runge-Kutta solver. Thus, we also propose and implement an implicit bilinear (Tustin) solver.__
+
 
 ```octave
  % Define the dynamic system in (x1, x2, x3, x4)
