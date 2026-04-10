@@ -1,0 +1,4 @@
+../Core/Src/ecgsyn_model.c:309:6:build_block_mv	336	static
+../Core/Src/ecgsyn_model.c:450:6:free_context	8	static
+../Core/Src/ecgsyn_model.c:464:6:ecgsyn_init_default_params	4	static
+../Core/Src/ecgsyn_model.c:489:6:ecgsyn_init_context	0	static

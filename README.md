@@ -5,16 +5,13 @@ systems, targeting deployment on embedded platforms.
 
 Hardware:
 
-- MCU:  [WeActStudio STM32U585CI](https://github.com/WeActStudio/WeActStudio.STM32U585Cx_CoreBoard)
-- Peripherals: 12-bit ADC and 12-bit true DAC
+- MCU:  [WeActStudio STM32H523](https://github.com/WeActStudio/WeActStudio.STM32U585Cx_CoreBoard)
+    - Peripherals: 12-bit true DAC
+        - PA4 as reference DAC
+        - PA5 as signal DAC
+- OLED SSD1306 0.96"
+- Mini oscilloscope
 
-Signal loopback setup:
-
-```
-PA5 ──[1kΩ]──> A0
-```
-
-<img width="578" height="260" alt="system" src="https://github.com/user-attachments/assets/9b1cf345-e2cf-44f1-9c8a-e61b376b41ad" />
 
 ---
 

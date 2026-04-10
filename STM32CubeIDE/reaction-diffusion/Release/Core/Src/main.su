@@ -1,0 +1,5 @@
+../Core/Src/main.c:227:13:oled_show_error	24	static
+../Core/Src/main.c:158:17:read_adc_channel	40	static,ignoring_inline_asm
+../Core/Src/main.c:358:6:SystemClock_Config	128	static,ignoring_inline_asm
+../Core/Src/main.c:243:5:main	152	static,ignoring_inline_asm
+../Core/Src/main.c:510:6:Error_Handler	0	static,ignoring_inline_asm

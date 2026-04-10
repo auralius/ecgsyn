@@ -1,0 +1,5 @@
+../Core/Src/main.c:227:13:oled_show_error	1
+../Core/Src/main.c:158:17:read_adc_channel	5
+../Core/Src/main.c:358:6:SystemClock_Config	4
+../Core/Src/main.c:243:5:main	24
+../Core/Src/main.c:510:6:Error_Handler	1
